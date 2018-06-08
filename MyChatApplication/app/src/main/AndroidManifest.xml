@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dnerd.dipty.mychatapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".MyChatApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".SignUp"
+            android:parentActivityName=".Login"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".Profile"
+            android:theme="@style/SettingsTheme" />
+        <activity
+            android:name=".ForgetPassword"
+            android:label="@string/reset_password"
+            android:parentActivityName=".Login"
+            android:theme="@style/FeedTheme" />
+        <activity
+            android:name=".Feed"
+            android:theme="@style/SettingsTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".Feed"
+            android:theme="@style/SettingsTheme" />
+        <activity
+            android:name=".UsersActivity"
+            android:label="@string/all_user"
+            android:parentActivityName=".Feed"
+            android:theme="@style/FeedTheme" />
+        <activity android:name=".ChatActivity"
+            android:theme="@style/SettingsTheme"></activity>
+    </application>
+
+</manifest>

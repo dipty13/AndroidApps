@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUp"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="60sp"
+        android:textStyle="bold|italic"
+        android:fontFamily="sans-serif-condensed"
+        android:textAppearance="?android:textAppearanceLarge"/>
+
+    <LinearLayout
+        android:id="@+id/signupLinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+
+        <EditText
+            android:id="@+id/signup_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:hint="@string/name"
+            android:drawableLeft="@drawable/person_icon"
+            android:textColorHint="@color/hint_color"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"/>
+        <!-- android:background="#11000000"!-->
+
+        <EditText
+            android:id="@+id/signup_email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:hint="@string/email"
+            android:drawableLeft="@drawable/email_icon"
+            android:textColorHint="@color/hint_color"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+        <EditText
+            android:id="@+id/signup_password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:password="true"
+            android:drawableLeft="@drawable/password_icon"
+            android:textColorHint="@color/hint_color"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signup_signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/button_custom_blue"
+        android:textSize="26sp"
+        android:text="@string/signup" />
+
+</LinearLayout>
+</ScrollView>

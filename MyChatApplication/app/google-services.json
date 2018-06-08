@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "749649158618",
+    "firebase_url": "https://mychatapplication-f8d98.firebaseio.com",
+    "project_id": "mychatapplication-f8d98",
+    "storage_bucket": "mychatapplication-f8d98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749649158618:android:357fda3fbe01f16e",
+        "android_client_info": {
+          "package_name": "com.dnerd.dipty.mychatapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749649158618-tv18ocb8koukeuo802oqdpf9ts9va9rv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dnerd.dipty.mychatapplication",
+            "certificate_hash": "96cac5bfcc58f9ec56c7ca64613d5c246dbdb3bf"
+          }
+        },
+        {
+          "client_id": "749649158618-0u3gltd13gprrhu5rg9pjpc9686bugau.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "749649158618-0u3gltd13gprrhu5rg9pjpc9686bugau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAE1sbMNND6rruAOfbdhqrIe6ZeDPoXrs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749649158618-0u3gltd13gprrhu5rg9pjpc9686bugau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

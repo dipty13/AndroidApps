@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/login_backgorund">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".Login">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        android:textStyle="bold|italic"
+        android:fontFamily="sans-serif-condensed"
+        android:textAppearance="?android:textAppearanceLarge"/>
+
+
+    <LinearLayout
+        android:id="@+id/loginLinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+
+        <EditText
+            android:id="@+id/login_email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:hint="@string/email"
+            android:drawableLeft="@drawable/email_icon"
+            android:textColorHint="@color/hint_color"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"/>
+        <!-- android:textColorHint="#FFD9D4D4"
+         />-->
+
+        <EditText
+            android:id="@+id/login_password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/password"
+            android:password="true"
+            android:drawableLeft="@drawable/password_icon"
+            android:textColorHint="@color/hint_color"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/button_custom_blue"
+        android:textSize="26sp"
+        android:text="@string/login"
+        />
+    <LinearLayout
+        android:id="@+id/loginLinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login_forget_password_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/forget_password"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+        <TextView
+            android:id="@+id/login_create_account_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:text="@string/createAccount"
+            android:paddingBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="?android:textAppearanceLarge"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

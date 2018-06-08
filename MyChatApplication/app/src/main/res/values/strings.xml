@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">MyTalk</string>
+    <string name="welcomeText">Chat with your friends now!</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="createAccount">Create Account!</string>
+
+
+    <string name="forget_password">Forgot your password?</string>
+    <string name="register">Create an Account!</string>
+    <string name="register1">Create an Account!</string>
+    <string name="name">Name</string>
+    <string name="name1">Name</string>
+    <string name="sign_up_error_message">Make sure you entered name,email  address and password!</string>
+    <string name="sign_up_error_title" translatable="false">Opps!</string>
+    <string name="sign_up_error_message_email">You can\'t leave email field empty!</string>
+    <string name="sign_up_error_message_name">You can\'t leave name field empty!</string>
+    <string name="sign_up_error_message_password">You can\'t leave password field empty!</string>
+    <string name="validEmailError">Please enter a valid email address!</string>
+    <string name="validPasswordError">Password can\'t be less than 8 characters!</string>
+    <string name="firebase_signup_error">Sign up wasn\'t successful!</string>
+    <string name="firebase_signup_alreadyReagistered">You are already registered!</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="login_error_message">Make sure you entered name,email  address and password!</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="profile_names" translatable="false">Induce Smile</string>
+    <string name="induce_smile" translatable="false">Induce Smile</string>
+
+    <string name="login_error_title" translatable="false">Opps!</string>
+    <string name="login_error_message_password">Put a valid password!</string>
+    <string name="firebase_login_error">Login wasn\'t successful!</string>
+    <string name="change_image">Change Image</string>
+    <string name="profileUpdated">Profile Updated</string>
+    <string name="phone_number">Mobile Number</string>
+    <string name="logout">Log Out</string>
+    <string name="open" translatable="false">Open</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="profile_name" translatable="false">Profile name</string>
+    <string name="country_location" translatable="false">Location</string>
+    <string name="title_activity_profile_fragment" translatable="false">ProfileFragment</string>
+    <string name="emailSent">Verification Email has been sent.Please verify your account!</string>
+    <string name="emailSendFailed">Couldn\'t send verification email!</string>
+    <string name="validPasswordError2">Password should consist of capital letter, small letter,numbers and specia characters!</string>
+    <string name="error_signingup">Couldn\'t signup! Check your internet connection!</string>
+
+    <string name="loginProgTitle" translatable="false">Login User</string>
+    <string name="progMsg">Please wait while logging in your account!</string>
+    <string name="emailNotVerifiedTitle">Email Not Verified!</string>
+    <string name="emailNotverfied">Email is not verified. Check your inbox!</string>
+    <string name="toastFrogetPassword">Email can\'t be empty</string>
+    <string name="edit_account_settings">Account Setting</string>
+    <string name="toastFrogetPasswordEmailSent">Password reset email has been sent!</string>
+    <string name="toastFrogetPasswordError">Error in sending password reset email!</string>
+    <string name="reset_password">Reset Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_sending_request">There was some error in sending request</string>
+
+    <string name="display_name">Display Name</string>
+    <string name="all_user">All Users</string>
+    <string name="current_user_status">Current User Status</string>
+    <string name="send_friend_request">SEND FRIEND REQUEST</string>
+    <string name="decline_friend_request">DECLINE FRIEND REQUEST</string>
+    <string name="total_friends">Total Friends</string>
+    <string name="menu_logout_label">Logout</string>
+    <string name="update_status">Update status</string>
+    <string name="update_status_text">update status</string>
+    <string name="user_name">User Name</string>
+    <string name="all_user_status">User status</string>
+</resources>

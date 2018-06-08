@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <corners android:radius="25dp"/>
+        <solid android:color="@color/light_purple_button"/>
+    <padding android:top="15dp" android:right="15dp" android:left="15dp" android:bottom="15dp"/>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/pressed_purple_button"
+        android:state_pressed="true" />
+    <item android:drawable="@color/focused_purple_button"
+        android:state_focused="true" />
+    <item android:drawable="@color/light_purple_button" />
+    </selector>
+</shape>

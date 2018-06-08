@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dnerd.dipty.mychatapplication.Feed">
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="@string/menu_logout_label"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_account_setting"
+        android:title="@string/edit_account_settings"
+        />
+    <item
+        android:id="@+id/action_edit_friends"
+        android:title="@string/all_user"
+        />
+
+</menu>

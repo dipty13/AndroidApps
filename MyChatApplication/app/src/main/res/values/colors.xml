@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0a0909</color>
+    <color name="colorPrimaryDark">#101010</color>
+    <color name="black">#000</color>
+    <color name="lightorange">#fdf2df</color>
+    <color name="lightorangedark">#ebd6ab</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="buttoncolor">#7be9e5</color>
+    <color name="colorbg">#655f7c</color>
+    <color name="colorbgupper">#c3bfd4</color>
+    <color name="colorbgaccent">#605587</color>
+    <color name ="app_theme_color">#61408c</color>
+    <color name ="toolbarcolor">#FF2B283E</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorMild">#9d9c9c</color>
+    <color name="colorPrimaryy">#f1eeee</color>
+    <color name="text_color">#250054</color>
+    <color name="colorPrimaryDarky">#bcb6b6</color>
+    <color name="light_purple_button">#e1d2f3</color>
+    <color name="pressed_purple_button">#ba9dda</color>
+    <color name="pressed_purple_button_dark">#FFAE86D9</color>color>
+    <color name="focused_purple_button">#d6c3ed</color>
+    <color name="backgroundTest">#FF363535</color>
+    <color name="proflieToolBar">#3d0943</color>
+    <color name="hint_color">#635e5e</color>
+    <color name="toolColor">#741e70</color>
+    <color name="wcColor">#FF0A0909</color>
+    <color name="login_backgorund">#7E57C2</color>
+    <color name="login_backgorund_dark">#673AB7</color>
+    <color name="login_backgorund_blue">#0277BD</color>
+    <color name="login_background_dark_blue">#435a68</color>
+    <color name="login_feed_dark_blue">#085c8e</color>
+    <color name="namecolor">#4a4a4a</color>
+
+    <color name="pressed_blue_button">#80DEEA</color>
+    <color name="pressed_blue_button_dark">#26C6DA</color>color>
+    <color name="focused_blue_button">#B2EBF2</color>
+    <color name="light_blue_button">#B2EBF2</color>
+    <!--<color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>-->
+</resources>
