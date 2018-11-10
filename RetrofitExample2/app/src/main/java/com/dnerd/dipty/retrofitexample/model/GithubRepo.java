@@ -4,7 +4,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 public class GithubRepo extends RealmObject {
-    @PrimaryKey
+
     private  String name;
     public String getName() {
         return name;

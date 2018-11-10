@@ -14,12 +14,14 @@ import android.widget.Toast;
 import com.dnerd.dipty.retrofitexample.adapter.GithubRepoAdapter;
 import com.dnerd.dipty.retrofitexample.model.GithubRepo;
 import com.dnerd.dipty.retrofitexample.network.RetrofitInstance;
+import com.dnerd.dipty.retrofitexample.realm_configuration.ConfigRealm;
 import com.dnerd.dipty.retrofitexample.request_interface.RetrofitClientInterface;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,9 +32,9 @@ import static retrofit2.Response.success;
 public class MainActivity extends AppCompatActivity {
     private ListView mListView;
     private Realm mRealm;
+    private RealmConfiguration mRealmConfig;
     private String task, repoName;
     private GithubRepoAdapter mAdapter;
-    private List<GithubRepo> mItemList = new ArrayList<GithubRepo>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +42,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mListView = findViewById(R.id.git_list_view);
-        //mRealm = Realm.getDefaultInstance();
+
+        mRealm.init(MainActivity.this);
+        mRealm = ConfigRealm.getRealmCongfiguration();
 
         Retrofit retrofit = RetrofitInstance.getRetrofitInstance();
-
         RetrofitClientInterface client = retrofit.create(RetrofitClientInterface.class);
 
         Call<List<GithubRepo>> call = client.reposForUser("dipty13");
@@ -55,15 +58,16 @@ public class MainActivity extends AppCompatActivity {
 
                 mAdapter = new GithubRepoAdapter(MainActivity.this, repos);
                 mListView.setAdapter(mAdapter);
-                mItemList = repos;
-               // success(repos);
+
+                saveUsingRealm(repos);
 
             }
 
             @Override
             public void onFailure(Call<List<GithubRepo>> call, Throwable t) {
-
                 Toast.makeText(MainActivity.this, getString(R.string.error),Toast.LENGTH_LONG).show();
+
+                showSavedDataFromRealm();
             }
         });
 
@@ -72,15 +76,39 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 showUpdateItemDialog(MainActivity.this, i);
+
             }
 
         });
 
     }
 
+    private void showSavedDataFromRealm() {
+        List<GithubRepo> repo = mRealm.where(GithubRepo.class).findAll();
+        if(repo != null)
+        {
+            mAdapter = new GithubRepoAdapter(MainActivity.this, repo);
+            mListView.setAdapter(mAdapter);
+        }
+    }
+
+    private void saveUsingRealm( List<GithubRepo> repos) {
+        mRealm.beginTransaction();
+        mRealm.delete(GithubRepo.class); //removes older value
+        mRealm.commitTransaction();
+
+        mRealm.beginTransaction();
+        for(int i = 0; i < repos.size(); i++){
+            GithubRepo repo = mRealm.createObject(GithubRepo.class);
+            repo.setName(repos.get(i).getName());
+        }
+        mRealm.commitTransaction();
+    }
+
     private void showUpdateItemDialog(Context context, int i) {
         final EditText taskEditText = new EditText(context);
         taskEditText.setText( mAdapter.getItem(i).getName());
+
         AlertDialog dialog = new AlertDialog.Builder(context)
                 .setTitle("Change Repo Name")
                 .setMessage("")
@@ -91,8 +119,9 @@ public class MainActivity extends AppCompatActivity {
                         task = String.valueOf(taskEditText.getText());
                         mAdapter.setNotifyOnChange(true);
                         repoName = task;
-                            mAdapter.getItem(i).setName(repoName);
-
+                        mRealm.beginTransaction();
+                        mAdapter.getItem(i).setName(repoName);
+                        mRealm.commitTransaction();
                     }
                 })
                 .setNegativeButton(R.string.cancel_button, null)
