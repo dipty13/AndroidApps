@@ -1,17 +1,12 @@
 package com.dnerd.dipty.playit;
 
-import android.media.AudioManager;
 import android.media.SoundPool;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
-    // Helpful Constants
-    private final int NR_OF_SIMULTANEOUS_SOUNDS = 7;
     private final float LEFT_VOLUME = 1.0f;
     private final float RIGHT_VOLUME = 1.0f;
     private final int NO_LOOP = 0;
@@ -34,14 +29,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // 	Updated way to create a SoundPool for API levels newer than Android Lollipop
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mSoundPool = new SoundPool.Builder()
-                    .setMaxStreams(NR_OF_SIMULTANEOUS_SOUNDS)
-                    .build();
-        } else {
-            // Deprecated way of creating a SoundPool before Android API 21.
-            mSoundPool = new SoundPool(NR_OF_SIMULTANEOUS_SOUNDS, AudioManager.STREAM_MUSIC, 0);
-        }
+        // Helpful Constants
+        int NR_OF_SIMULTANEOUS_SOUNDS = 7;
+        mSoundPool = new SoundPool.Builder()
+                .setMaxStreams(NR_OF_SIMULTANEOUS_SOUNDS)
+                .build();
 
         // Get the resource IDs to identify the sounds and store them in variables
         mCSoundId = mSoundPool.load(getApplicationContext(), R.raw.note1_c, 1);
